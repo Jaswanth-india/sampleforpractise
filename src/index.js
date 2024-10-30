@@ -7,7 +7,7 @@ const Main = (props) => {
     
     if(!props.bannerData){
         useEffect(()=>{
-            fetch("https://api.paritydeals.com/api/v1/deals/discount/?pd_identifier="+props.pdIdentifier+"&ip_address="+props.ipAddress)
+            fetch("https://api.paritydeals.com/api/v1/deals/discount/?pd_identifier="+props.pdIdentifier)
             .then((res)=>res.json())
             .then((res)=>{
                 setBannerData(res);

@@ -27,7 +27,7 @@ var Main = function Main(props) {
     setStyle = _useState4[1];
   if (!props.bannerData) {
     (0, _react.useEffect)(function () {
-      fetch("https://api.paritydeals.com/api/v1/deals/discount/?pd_identifier=" + props.pdIdentifier + "&ip_address=" + props.ipAddress).then(function (res) {
+      fetch("https://api.paritydeals.com/api/v1/deals/discount/?pd_identifier=" + props.pdIdentifier).then(function (res) {
         return res.json();
       }).then(function (res) {
         setBannerData(res);
